@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./assets/les2.jpg');
+  background-size: cover;
+}
+
+#game {
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.29);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  font-family: "Seymour One", sans-serif;
+}
+
+h1 {
+  background: rgb(255, 42, 114);
+  background: linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 1) 50%, rgba(255, 129, 45, 1) 100%);
+  text-shadow: 0 10px 20px rgba(255, 166, 0, 0.5);
+  font-size: 40px;
+  background-clip: text;
+  color: transparent;
+  transform: translate(0,-50%);
+  font-weight:bold;
+  /* font-style: italic; */
+  background-position:left;
+  background-size:200% 100%;
+  transition:0.3s;
+  font-family: "Seymour One", sans-serif;
+  /* font-family: "Press Start 2P", system-ui; */
+}
+h1:hover {
+  background-position: right;
+  cursor: pointer;
+  transform: translateY(-50%) rotate(-1deg);
+  text-shadow: 0 10px 50px rgba(255, 166, 0, 0.5);
+}
+.hands{
+  display: flex;
+  justify-content:space-between;
+  overflow: hidden;
+}
+.hands img{
+  display: block;
+  width: 30%;
+}
+h3{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size:60px;
+  color:white;
+  text-shadow: 0 0px 20px rgba(255, 166, 0, 1);
+  font-weight:normal;
+  opacity:0;
+}
+h2{
+  display: block;
+  width:30%;
+  text-shadow: 0 0px 20px rgba(255, 166, 0, 1);
+  color:white;
+}
+.scoreboard{
+  display: flex;
+  justify-content: space-between;
+}
+#gradient{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background: linear-gradient(90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
+  z-index: -1;
+  top:0;
+  border-radius: 15px;
+}
+button{
+  width: 100px;
+  height: 100px;
+  border-radius:100px;
+  border:none;
+  margin:8px;
+  transform: translate(0,50%);
+  transition:0.3s;
+  border: 3px solid #ffffff00;
+  cursor:pointer;
+}
+
+button:hover{
+  border: 3px solid #ffffff55;
+  box-shadow: 0 0px 50px rgb(255, 255, 255, 0.3);
+}
+#rock{
+  background-image: url('./assets/rock.svg'),linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 0.5) 50%, rgba(255, 42, 114, 1) 100%);
+}
+#paper{
+  background-image: url('./assets/paper.svg'),linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 0.5) 50%, rgba(255, 42, 114, 1) 100%);
+}
+#scissors{
+  background-image: url('./assets/scissors.svg'),linear-gradient(90deg, rgba(255, 42, 114, 1) 0%, rgba(170, 104, 255, 0.5) 50%, rgba(255, 42, 114, 1) 100%);
+}
+#left{
+  transform: translateX(-100%);
+}
+#right{
+  transform: translateX(100%);
+
+}
+.activeCounter{
+  animation: 1s 3 activeCounter;
+}
+@keyframes activeCounter {
+  0%{
+    transform:translate(-50%, -50%) scale(10);
+    opacity:0;
+  }
+  50%{
+   transform: translate(-50%, -50%) scale(1);
+   opacity:1;
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(1);
+    opacity:0
+  }
+}
