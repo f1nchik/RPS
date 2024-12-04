@@ -52,6 +52,7 @@ h1:hover {
 .hands img{
   display: block;
   width: 30%;
+  transition:0.5s;
 }
 h3{
   position:absolute;
@@ -63,6 +64,7 @@ h3{
   text-shadow: 0 0px 20px rgba(255, 166, 0, 1);
   font-weight:normal;
   opacity:0;
+  transition:2s;
 }
 h2{
   display: block;
@@ -78,10 +80,20 @@ h2{
   position:absolute;
   width:100%;
   height:100%;
-  background: linear-gradient(90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
   z-index: -1;
   top:0;
   border-radius: 15px;
+  opacity:0;
+  transition:0.5s;
+  /* background-size */
+}
+#game .gradientLeft{
+  opacity:1;
+  background: linear-gradient(90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
+}
+#game .gradientRight{
+  opacity:1;
+  background: linear-gradient(-90deg, rgba(78,255,0,0.5858718487394958) 0%, rgba(255,255,255,0) 50%, rgba(255,45,45,0.5970763305322129) 100%);
 }
 button{
   width: 100px;
@@ -131,4 +143,15 @@ button:hover{
     transform: translate(-50%, -50%) scale(1);
     opacity:0
   }
+}
+.hands .showHand{
+  transform:none !important;
+}
+.showCounter{
+  opacity:1;
+
+}
+.buttonBlocked{
+  pointer-events:none;
+
 }
